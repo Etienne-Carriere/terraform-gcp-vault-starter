@@ -21,7 +21,7 @@ resource "google_compute_region_backend_service" "lb" {
   name          = "${var.resource_name_prefix}-vault-lb"
 
   description           = "The backend service of the load balancer for Vault"
-  load_balancing_scheme = "INTERNAL_MANAGED"
+  load_balancing_scheme = "EXTERNAL"
   port_name             = "https"
   protocol              = "HTTPS"
   timeout_sec           = 10
